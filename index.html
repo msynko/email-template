@@ -13,6 +13,12 @@
   padding: 0;
   margin: 0;
 }
+h1{
+ font-family: Roboto, sans-serif;
+ text-align: left;
+ font-size: 42px;
+ line-height: 46.88px;
+}
 
 h2{
     font-size: 18px; 
@@ -27,12 +33,19 @@ h3{
     margin: 20px 0 5px; 
     font-family: Roboto, sans-serif;
     color: black;
+    margin:0
 }
 p{
   font-size: 14px; 
   font-family: Open Sans, sans-serif; 
   line-height:18px;
   color: #7E8489;
+}
+a {
+    text-decoration: none;
+}
+img{
+    object-fit: contain;
 }
 .button  {
  margin: 10px 0;
@@ -48,42 +61,146 @@ p{
  display: inline-block; 
  background: linear-gradient(113.29deg, #7A76FF 1.85%, #7FE4FF 98.15%); 
 }
+.header{
+    color: black;
+    padding: 41px 41px 10px 41px; 
+    width: 259px; 
+    height: 228px
+}
+.heading{
+    padding:0 41px;
+}
+.heading h2{
+    line-height:25px;
+}
+.heading p{
+  line-height:24.51px; 
+  font-size: 18px;
+}
+.divider{
+    padding: 20px 41px
+}
 
+.divider div{
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.description{
+    padding: 0 41px;
+}  
+.description p,
+.description h2{
+    margin: 0 0 20px 0
+} 
+.description a{
+    color:#7E8489;
+}
+.info-box-left{
+    vertical-align: top; 
+    padding: 0 10px 0 41px; 
+    width: 234px
+}
+.info-box-left h3{
+    margin:20px 0 10px;
+}
+
+.info-box-left p{
+    line-height:19.07px;
+}
+
+
+
+.info-box-right{
+    vertical-align: top; 
+    padding: 0 41px 0 10px;  
+    width: 234px
+}
+.info-box-right h3{
+    margin:20px 0 10px;
+}
+.info-box-right p{
+    line-height:19.07px;
+}
+
+.info-row-img{
+    vertical-align: top;
+    padding: 20px 15px 20px;
+    width: 185px; 
+    height: 234px 
+}
+.info-row-text{
+    vertical-align: top; 
+    padding: 20px 41px 20px 15px;
+}
+.info-row-tex p{
+    line-height:19.07px;
+}
+
+.footer{
+    padding: 10px 41px 20px;
+    width:104px; 
+    height: 21px 
+}
+.footer-copyright{
+    padding: 0px 41px 41px;  
+}
+.footer-copyright a {
+    color:#7A76FF;
+}
+
+@media only screen and (max-width:480px){
+        #email{
+          max-width: 480px;
+        }
+        h1{
+            font-size: 32px;
+            line-height: 32px;
+        }
+        h2{
+            font-size: 13px; 
+            line-height: 13px; 
+        }
+        p{
+            font-size: 10px;
+            line-height:10px;
+        }
+}
 </style>
 </head>
 
 <body>
-<div id="email" style="width:600px;margin: auto; background:white;">
+<div id="email" style="width:600px; margin: auto; background:white;">
 <table role="presentation" border="0" width="100%" cellspacing="0">
   <tr>
-    <td bgcolor="#FFFFFF" align="center" style="color: black; padding: 41px 41px 10px 41px; width: 259px; height: 228px">
-       <img alt="Flower" src="./images/header.png" width="100%" height="100%" style="object-fit: contain">
-        <h1 style="font-size: 42px; font-family:Roboto; text-align: left;"> Dash Club -2022 Edition!</h1>
+    <td bgcolor="#FFFFFF" align="center" class="header">
+       <img alt="header" src="https://i.postimg.cc/TPFKcBHY/header.png" width="100%" height="100%">
+        <h1> Dash Club -2022 Edition!</h1>
         </td>
     </tr>
 </table>
 <table role="presentation" border="0" width="100%" cellspacing="0">
     <tr>
-        <td style="padding:0 41px" >
-            <h2 style="line-height:25px;">Hello Dash Club and Happy 2020!</h2>
-            <p style="line-height:24.51px; font-size: 18px;">It has been a while, and we've got lots of good stuff from the last few months to share.</p>
+        <td class="heading" >
+            <h2>Hello Dash Club and Happy 2020!</h2>
+            <p>It has been a while, and we've got lots of good stuff from the last few months to share.</p>
         </td>
     </tr>
-    <td style="padding:20px 41px" >
-        <div style="border-bottom: 1px solid #E7E7E7;">
+    <tr>
+    <td class="divider" >
+        <div></div>
     </td>
     </tr>
 </table>
 
 <table role="presentation" border="0" width="100%" cellspacing="0">
     <tr>
-        <td style="padding: 0 41px;">
-            <h2 style="margin: 0 0 20px 0">We spent the fall working on page load performance:</h2>
-            <p style="margin: 0 0 20px 0;">1. Previously, we loaded all of the JavaScript from all of the component librar- ies upfront. Now, we load them on demand. This is called “lazy loading.” So, if your home page doesn't display a graph, then the plotly.js library isn't loaded until you navigate to the page that does.
+        <td class="description">
+            <h2>We spent the fall working on page load performance:</h2>
+            <p>1. Previously, we loaded all of the JavaScript from all of the component libraries upfront. Now, we load them on demand. This is called “lazy loading.” So, if your home page doesn't display a graph, then the plotly.js library isn't loaded until you navigate to the page that does.
             </p>
-            <p style="margin: 0 0 20px 0"> 2. We started caching your app’s JavaScript and CSS assets. With these improvements, our documentation <a style="color:#7E8489; text-decoration: none; "href="https://dash.plot.ly">(https://dash.plot.ly) </a>loads much, much faster. Your apps should too!
+            <p> 2. We started caching your app’s JavaScript and CSS assets. With these improvements, our documentation <a  href="https://dash.plot.ly">(https://dash.plot.ly) </a>loads much, much faster. Your apps should too!
             </p>
-            <p style="margin: 0 0 20px 0">With these improvements, our documentation  <a style="color:#7E8489; text-decoration: none; "href="https://dash.plot.ly">(https://dash.plot.ly) </a> loads much, much faster. Your apps should too!
+            <p>With these improvements, our documentation  <a  href="https://dash.plot.ly">(https://dash.plot.ly) </a> loads much, much faster. Your apps should too!
             </p>
         </td>
     </tr>
@@ -91,17 +208,17 @@ p{
 
     <table role="presentation" border="0" width="100%" cellspacing="0">
       <tr>
-          <td style="vertical-align: top; padding: 0 10px 0 41px; width: 234px" > 
-                <img alt="dark-mode" src="./images/dark-image.png" width="100%" height="100%" style="object-fit: contain" align="center">
+          <td class="info-box-left" > 
+                <img alt="dark-mode" src="https://i.postimg.cc/J7bsb63M/dark-image.png" width="100%" height="100%"  align="center">
                 <h3>Lorem ipsum text</h3>
-                <p style="line-height:19.07px;">Lorem ipsum dolor sit amet, consecte- tur adipiscing elit, sed do eiusmod tempor..</p>
-                <a class="button" href="https://www.google.com/">Read more</a></a>
+                <p>Lorem ipsum dolor sit amet, consecte- tur adipiscing elit, sed do eiusmod tempor..</p>
+                <a class="button" href="https://www.google.com/">Read more</a>
             </td>
 
-          <td style="vertical-align: top; padding: 0 41px 0 10px;  width: 234px""> 
-                <img alt="light-mode" src="./images/light-image.png"width="100%" height="100%" style="object-fit: contain" align="center">
+          <td class="info-box-right"> 
+                <img alt="light-mode" src="https://i.postimg.cc/Y0kqn7Nk/light-image.png"width="100%" height="100%" align="center">
                 <h3>Lorem ipsum text</h3>
-                <p style="line-height:19.07px;">Lorem ipsum dolor sit amet, consecte- tur adipiscing elit, sed do eiusmod tempor..</p>
+                <p>Lorem ipsum dolor sit amet, consecte- tur adipiscing elit, sed do eiusmod tempor..</p>
                 <a class="button" href="https://www.google.com/">Read More</a>
             </td>
         </tr>  
@@ -109,40 +226,40 @@ p{
 
   <table role="presentation" border="0" width="100%">
       <tr>
-         <td style="padding: 40px 41px" >
-            <div style="border-bottom: 1px solid #E7E7E7;">
+         <td class="divider" >
+            <div></div>
         </td>
     </tr>
   </table>
 
     <table role="presentation" border="0" width="100%">
         <tr>
-            <td style="vertical-align: top; padding: 20px 15px 20px; width: 185px; height: 234px "> 
-                <img alt="dark-mode" src="./images/photo.png" width="100%" height="100%" align="left" style="object-fit: contain;">
+            <td class="info-row-img"> 
+                <img alt="dark-mode" src="https://i.postimg.cc/8kBCFFDC/photo.png" width="100%" height="100%" align="left">
              </td>
 
-            <td style="vertical-align: top; padding: 20px 41px 20px 15px"> 
+            <td class="info-row-text"> 
                 <h3>Lorem ipsum text</h3>
-                <p style="line-height:19.07px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi- dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi- dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a class="button" href="https://www.google.com/">Read More</a>
             </td>
         </tr>  
         <tr>
-            <td style="vertical-align: top; padding: 20px 15px 0 41px"> 
+            <td class="info-row-text"> 
                 <h3>Lorem ipsum text</h3>
                 <p style="line-height:19.07px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi- dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a class="button"  href="https://www.google.com/">Read More</a>
             </td>
-                <td style="vertical-align: top; padding: 20px 41px 0 15px; width: 185px; height: 234px"> 
-                <img alt="dark-mode" src="./images/photo.png" width="100%" height="100%" align="left" style="object-fit: contain;">
+                <td class="info-row-img"> 
+                <img alt="dark-mode" src="https://i.postimg.cc/8kBCFFDC/photo.png" width="100%" height="100%" align="left">
              </td>
         </tr>  
   </table>
 
     <table role="presentation" border="0" width="100%">
       <tr>
-         <td style="padding: 40px 41px" >
-            <div style="border-bottom: 1px solid #E7E7E7;">
+         <td class="divider" >
+            <div></div>
         </td>
     </tr>
   </table>
@@ -150,14 +267,14 @@ p{
 
   <table role="presentation" border="0" width="100%" cellspacing="0">
         <tr>
-          <td style="padding: 10px 41px 20px; width:104px; height: 21px ">
-              <img alt="social" src="./images/social.png" align="left" style="object-fit: contain;">
+          <td class="footer">
+              <img alt="social" src="https://i.postimg.cc/t47Rm261/social.png" align="left">
           </td>
         </tr>
         <tr>
-          <td style="padding: 0px 41px 41px;  ">
+          <td class="footer-copyright">
               <p>&#169; 2022 Plotly. All rights reserved. </p>
-              <p>Click <a style="text-decoration:none; color:#7A76FF;" href="https://www.google.com/"><strong>HERE</strong></a> to unsubscribe or change your email preferences.</p>
+              <p>Click <a href="https://www.google.com/"><strong>HERE</strong></a> to unsubscribe or change your email preferences.</p>
           </td>
         </tr>
       </table> 
